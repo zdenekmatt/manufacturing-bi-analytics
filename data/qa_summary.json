@@ -1,0 +1,38 @@
+{
+  "result": "PASS",
+  "verification_scope": "Local CSV checksum, PK/FK, chronology, quantities, effective dates, inventory daily stock, controlled raw anomalies",
+  "limitations": "PostgreSQL import and SQL checks must be run on a live local PostgreSQL server; this check does not verify the user PC.",
+  "dataset_version": "1.0.0",
+  "seed": 20261115,
+  "total_rows": 261846,
+  "tables": 22,
+  "business_records": {
+    "sales_orders": 8600,
+    "sales_order_lines": 14077,
+    "production_orders": 15287,
+    "production_orders_open": 77,
+    "shipment_lines": 18930,
+    "goods_receipts": 7476,
+    "inventory_transactions": 91718
+  },
+  "raw_export_notes": {
+    "deliberate_duplicate_references": 97,
+    "raw_missing_optional_note_rows": 681
+  },
+  "checks": {
+    "sha256_manifest": "PASS",
+    "static_postgres_import_contract": "PASS",
+    "primary_keys": "PASS",
+    "foreign_keys": "PASS",
+    "quantity_allocation": "PASS",
+    "business_event_chronology": "PASS",
+    "sales_shipping_reconciliation": "PASS",
+    "procurement_receipt_reconciliation": "PASS",
+    "production_quality_reconciliation": "PASS",
+    "inventory_movements": "PASS",
+    "nonnegative_end_of_day_stock": "PASS",
+    "effective_dated_costs": "PASS",
+    "foreign_exchange_coverage": "PASS",
+    "raw_export_reconciliation": "PASS"
+  }
+}

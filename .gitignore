@@ -1,0 +1,32 @@
+# Private continuity notes and mentoring rules
+MASTER_PROMPT.md
+PROJECT_CONTEXT*.md
+
+# Locally generated bulk datasets (reproducible via data/generator/generate.py)
+data/releases/
+
+# Local configuration, passwords, and Python artifacts
+.env
+.env.*
+*.local
+__pycache__/
+*.py[cod]
+.venv/
+.vscode/settings.json
+
+# Power BI cache/temporary files and Office lock files
+*.pbit.tmp
+*.pbix.tmp
+~$*
+
+# Local helper files
+data/generator/generation_log.txt
+sql/investigations/helpful.sql
+
+# Unfinished investigation
+tickets/MIS-999_*.md
+sql/investigations/MIS-999_*.sql
+docs/MIS-999_*.md
+
+# Outdated onboarding notes
+docs/onboarding_cz.md

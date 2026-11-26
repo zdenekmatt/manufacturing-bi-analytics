@@ -1,0 +1,29 @@
+-- Run ONLY with psql from repository root; relative CSV paths resolve from current working directory.
+-- psql -X -v ON_ERROR_STOP=1 -d manufacturing_bi -f sql/setup/01_load_data.psql
+-- The schema must already exist and the tables must be empty; failure rolls back the import.
+\set ON_ERROR_STOP on
+BEGIN;
+\copy mis.production_lines FROM 'data/releases/01_core/production_lines.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.customers FROM 'data/releases/01_core/customers.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.products FROM 'data/releases/01_core/products.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.materials FROM 'data/releases/03_supply_chain_finance/materials.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.suppliers FROM 'data/releases/03_supply_chain_finance/suppliers.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.bom_components FROM 'data/releases/03_supply_chain_finance/bom_components.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.sales_orders FROM 'data/releases/01_core/sales_orders.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.sales_order_lines FROM 'data/releases/01_core/sales_order_lines.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.production_orders FROM 'data/releases/02_operations/production_orders.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.production_operations FROM 'data/releases/02_operations/production_operations.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.downtime_events FROM 'data/releases/02_operations/downtime_events.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.quality_events FROM 'data/releases/02_operations/quality_events.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.purchase_order_lines FROM 'data/releases/03_supply_chain_finance/purchase_order_lines.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.goods_receipts FROM 'data/releases/03_supply_chain_finance/goods_receipts.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.shipments FROM 'data/releases/01_core/shipments.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.shipment_lines FROM 'data/releases/01_core/shipment_lines.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.inventory_transactions FROM 'data/releases/03_supply_chain_finance/inventory_transactions.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.material_cost_history FROM 'data/releases/03_supply_chain_finance/material_cost_history.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.product_standard_cost_history FROM 'data/releases/03_supply_chain_finance/product_standard_cost_history.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.manufacturing_cost_rates FROM 'data/releases/03_supply_chain_finance/manufacturing_cost_rates.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy mis.exchange_rates FROM 'data/releases/03_supply_chain_finance/exchange_rates.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+\copy raw_import.raw_goods_receipts_export FROM 'data/releases/03_supply_chain_finance/raw_goods_receipts_export.csv' WITH (FORMAT csv, HEADER true, NULL '', ENCODING 'UTF8')
+COMMIT;
+ANALYZE;

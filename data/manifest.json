@@ -1,0 +1,120 @@
+{
+  "dataset_version": "1.0.0",
+  "seed": 20261115,
+  "coverage_start": "2024-10-01",
+  "coverage_end": "2026-09-30",
+  "snapshot_date": "2026-10-31",
+  "files": {
+    "customers": {
+      "path": "data/releases/01_core/customers.csv",
+      "row_count": 80,
+      "sha256": "d4a44d1a923b5d8f59e602d937bcaabf11c46485d6375559df98abae8fb845e1"
+    },
+    "products": {
+      "path": "data/releases/01_core/products.csv",
+      "row_count": 50,
+      "sha256": "2b813ae2922be2d203f515b6e41bb19263b5ed550665f64098d329e6fc8b763e"
+    },
+    "production_lines": {
+      "path": "data/releases/01_core/production_lines.csv",
+      "row_count": 6,
+      "sha256": "dfe6157d4000370f0f28316b7dd07ed5684eb654975048a7eb3fa8a0a540386a"
+    },
+    "sales_orders": {
+      "path": "data/releases/01_core/sales_orders.csv",
+      "row_count": 8600,
+      "sha256": "c9f8191d0477d7b71df43d13dae4de5e6d998a27b1529e10515b5883fad6f4e7"
+    },
+    "sales_order_lines": {
+      "path": "data/releases/01_core/sales_order_lines.csv",
+      "row_count": 14077,
+      "sha256": "a7daa443c4deb00f20d225d46e6c03319267e8e6dff5ca731b9bd32a11c58185"
+    },
+    "shipments": {
+      "path": "data/releases/01_core/shipments.csv",
+      "row_count": 18495,
+      "sha256": "3bc4912cbe9ece17308522eefeb8f4ee7a5db3e710dc883248d0dd0ea701f51f"
+    },
+    "shipment_lines": {
+      "path": "data/releases/01_core/shipment_lines.csv",
+      "row_count": 18930,
+      "sha256": "a7db4c7a6c5d69a1ce6607a7bbcf36de656d9072d797e44bd1d7e21cd5d1f3f6"
+    },
+    "production_orders": {
+      "path": "data/releases/02_operations/production_orders.csv",
+      "row_count": 15287,
+      "sha256": "39b3e08235dab4c72aee475fc15e81262b5c2373b9d58568b7b98aecdf4d186f"
+    },
+    "production_operations": {
+      "path": "data/releases/02_operations/production_operations.csv",
+      "row_count": 45630,
+      "sha256": "100522086c89c06920758a0ac7093458a424d608701535d86cc6964e1fcc20f2"
+    },
+    "downtime_events": {
+      "path": "data/releases/02_operations/downtime_events.csv",
+      "row_count": 10397,
+      "sha256": "31e6fd825f987b86aa8d9d5e7b98cb267a27aa7dd5045a8fd939d1d42412545e"
+    },
+    "quality_events": {
+      "path": "data/releases/02_operations/quality_events.csv",
+      "row_count": 15210,
+      "sha256": "478c4851b08088a7d6d58b5726838d8961404aaa36de52d4639647c0a7c7b581"
+    },
+    "materials": {
+      "path": "data/releases/03_supply_chain_finance/materials.csv",
+      "row_count": 90,
+      "sha256": "abf03aa0123df985f164cf4164d09537d2e721cc0f4ae3886db4b5b9bd580d40"
+    },
+    "suppliers": {
+      "path": "data/releases/03_supply_chain_finance/suppliers.csv",
+      "row_count": 30,
+      "sha256": "ca29745c1d299c737cd74a95b30a9f7a97ade1f77ebbafe9da44e3b692a9616d"
+    },
+    "bom_components": {
+      "path": "data/releases/03_supply_chain_finance/bom_components.csv",
+      "row_count": 164,
+      "sha256": "4b234f5f7f44b818fc94ab7d217c1d4744f2e9494b9c4792876111897a2ddcb7"
+    },
+    "purchase_order_lines": {
+      "path": "data/releases/03_supply_chain_finance/purchase_order_lines.csv",
+      "row_count": 5247,
+      "sha256": "be180fe714a6423dd6a2095724a11e9716f1e17685fdd0558083d528bbd7d473"
+    },
+    "goods_receipts": {
+      "path": "data/releases/03_supply_chain_finance/goods_receipts.csv",
+      "row_count": 7476,
+      "sha256": "8e4f119b6db35a4ef8d16c239c41fba51b81d4036d6b0996b23b7cc45a2efd2f"
+    },
+    "inventory_transactions": {
+      "path": "data/releases/03_supply_chain_finance/inventory_transactions.csv",
+      "row_count": 91718,
+      "sha256": "f6dd2efa2902b11312fc42b30de8f2f5e9b023eb601f274c3dd074b398f7611e"
+    },
+    "material_cost_history": {
+      "path": "data/releases/03_supply_chain_finance/material_cost_history.csv",
+      "row_count": 720,
+      "sha256": "c86709ac93fae41a3a6569a9906d2703157019c2ee58f09355910b9870a648ed"
+    },
+    "product_standard_cost_history": {
+      "path": "data/releases/03_supply_chain_finance/product_standard_cost_history.csv",
+      "row_count": 400,
+      "sha256": "53499c04d0b4a3d519f2166f3ee057e1e2bdcac500c5e6bbf4237f678e8cf476"
+    },
+    "manufacturing_cost_rates": {
+      "path": "data/releases/03_supply_chain_finance/manufacturing_cost_rates.csv",
+      "row_count": 144,
+      "sha256": "0323db18c5e759513556ca344759f6b56bde92e76d95363019b598b1f43323c3"
+    },
+    "exchange_rates": {
+      "path": "data/releases/03_supply_chain_finance/exchange_rates.csv",
+      "row_count": 1522,
+      "sha256": "f9230eb339b090e117dfc006e183b169b2bc39365b6f1e7f3a412ce35b371cf1"
+    },
+    "raw_goods_receipts_export": {
+      "path": "data/releases/03_supply_chain_finance/raw_goods_receipts_export.csv",
+      "row_count": 7573,
+      "sha256": "6ffa2c5f53457fd0567563de64ed40be595a286519b92c0fd68653bc2ddcccdc"
+    }
+  },
+  "total_rows": 261846
+}
